@@ -15,13 +15,13 @@ function checkValue(init, quan, curr) {
   var pp = Math.floor((profit / init) * 100);
   var lp = Math.floor((loss / init) * 100);
   if (profit > loss) {
-    resultText.innerText = "TOO the moon. Profit: " + profit + " Rs, profit in percentage: " + pp + "%";
+    resultText.innerHTML = "TOO the moon<span>&#x1F911 &#x1F911</span>. Profit: " + profit + " Rs, profit in percentage: " + pp + "%";
   }
   else if (profit == loss) {
-    resultText.innerText = "Still on earth."
+    resultText.innerHTML = "NO fuel no moon<span>&#x1F642&#x1F642</span>."
   }
   else {
-    resultText.innerText = "Its a crash. loss: " + loss + " Rs, loss in percentage: " + lp + "%";
+    resultText.innerHTML = "Its a crash<span>&#x1F62D &#x1F62D</span>. loss: " + loss + " Rs, loss in percentage: " + lp + "%";
   }
 }
 
