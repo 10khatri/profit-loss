@@ -43,6 +43,7 @@ input{
   padding:8px;
   box-shadow: 1px 1px 6px #616161;
   border-radius: 20px;
+  padding-left:20px;
 }
 #initial-price{
   margin-top:40%;
