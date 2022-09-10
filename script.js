@@ -4,16 +4,16 @@ var currentPrice = document.querySelector("#current-price");
 var checkBtn = document.querySelector(".btn");
 var resultText = document.querySelector(".output");
 function handleEvent() {
-  var init = initialPrice.value;
-  var quan = stockQuantity.value;
-  var curr = currentPrice.value;
+  var init = Number(initialPrice.value);
+  var quan = Number(stockQuantity.value);
+  var curr = Number(currentPrice.value);
   checkValue(init, quan, curr);
 };
 function checkValue(init, quan, curr) {
-  var profit = (curr * quan) - (init * quan);
-  var loss = (init * quan) - (curr * quan);
-  var pp = Math.floor((profit / init) * 100);
-  var lp = Math.floor((loss / init) * 100);
+  var profit = (curr - init) * quan;
+  var loss = (init - curr) * quan;
+  var pp = (profit / init) * 100;
+  var lp = (loss / init) * 100;
   if (profit > loss) {
     resultText.innerHTML = "TOO the moon<span>&#x1F911 &#x1F911</span>. Profit: " + profit + " Rs, profit in percentage: " + pp + "%";
   }
